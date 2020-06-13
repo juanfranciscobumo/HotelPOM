@@ -1,6 +1,7 @@
-package com.qvision.certificacion.agenciaDeViajes.runners;
+package com.qvision.certificacion.runners;
 
 import net.serenitybdd.cucumber.CucumberWithSerenity;
+
 import org.junit.runner.Description;
 import org.junit.runner.Runner;
 import org.junit.runner.notification.RunNotifier;
@@ -13,7 +14,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.junit.runners.model.InitializationError;
 
-import com.qvision.certificacion.agenciaDeViajes.utils.BeforeSuite;
+import com.qvision.certificacion.agenciadeviajes.utils.BeforeSuite;
 
 /**
 * Personalizaci�n del Runner con el cual se puede determinar que busque y modifique los .feature antes de ser ejecutados

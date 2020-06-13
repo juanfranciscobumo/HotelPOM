@@ -1,4 +1,4 @@
-package com.qvision.certificacion.agenciaDeViajes.pages;
+package com.qvision.certificacion.qvision.userinterfaces;
 
 import org.openqa.selenium.WebElement;
 

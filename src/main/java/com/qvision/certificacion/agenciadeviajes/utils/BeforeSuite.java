@@ -1,4 +1,4 @@
-package com.qvision.certificacion.agenciaDeViajes.utils;
+package com.qvision.certificacion.agenciadeviajes.utils;
 
 
 import java.lang.annotation.ElementType;

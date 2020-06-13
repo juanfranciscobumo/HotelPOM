@@ -1,4 +1,4 @@
-package com.qvision.certificacion.agenciaDeViajes.pages;
+package com.qvision.certificacion.qvision.userinterfaces;
 
 import java.text.ParseException;
 import java.util.List;
@@ -7,10 +7,10 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
 import com.codoid.products.exception.FilloException;
-import com.qvision.certificacion.agenciaDeViajes.utils.CalcularTarifa;
-import com.qvision.certificacion.agenciaDeViajes.utils.DiferenciaDeDias;
-import com.qvision.certificacion.agenciaDeViajes.utils.ManipularExcel;
-import com.qvision.certificacion.agenciaDeViajes.utils.PrecioMasBajo;
+import com.qvision.certificacion.agenciadeviajes.utils.CalcularTarifa;
+import com.qvision.certificacion.agenciadeviajes.utils.DiferenciaDeDias;
+import com.qvision.certificacion.agenciadeviajes.utils.ManipularExcel;
+import com.qvision.certificacion.agenciadeviajes.utils.PrecioMasBajo;
 
 import net.serenitybdd.core.annotations.findby.FindBy;
 import net.serenitybdd.core.pages.PageObject;

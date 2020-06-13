@@ -1,7 +1,7 @@
 /**
  * @since 25/04/2018
  */
-package com.qvision.certificacion.agenciaDeViajes.utils;
+package com.qvision.certificacion.agenciadeviajes.utils;
 
 import java.io.File;
 import java.io.IOException;

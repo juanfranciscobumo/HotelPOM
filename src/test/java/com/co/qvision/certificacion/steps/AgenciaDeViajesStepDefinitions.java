@@ -1,4 +1,4 @@
-package com.qvision.certificacion.agenciaDeViajes.steps;
+package com.co.qvision.certificacion.steps;
 
 import static org.junit.Assert.assertEquals;
 
@@ -6,17 +6,18 @@ import java.text.ParseException;
 import java.util.List;
 
 import com.codoid.products.exception.FilloException;
-import com.qvision.certificacion.agenciaDeViajes.pages.AgenciaDeViajesPages;
-import com.qvision.certificacion.agenciaDeViajes.pages.PreciosHotelPages;
-import com.qvision.certificacion.agenciaDeViajes.pages.TarifaNetaPages;
-import com.qvision.certificacion.agenciaDeViajes.utils.CalcularTarifa;
+
+import com.qvision.certificacion.agenciadeviajes.utils.CalcularTarifa;
+import com.qvision.certificacion.qvision.userinterfaces.AgenciaDeViajesPages;
+import com.qvision.certificacion.qvision.userinterfaces.PreciosHotelPages;
+import com.qvision.certificacion.qvision.userinterfaces.TarifaNetaPages;
 
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
 public class AgenciaDeViajesStepDefinitions {
-	//hola mama como estas
+
 	AgenciaDeViajesPages agenciaDeViajes;
 	PreciosHotelPages preciosHotelPages;
 	TarifaNetaPages tarifaNetaPages;
@@ -28,15 +29,13 @@ public class AgenciaDeViajesStepDefinitions {
 
 
 	@When("^realice la busqueda con los datos solicitados$")
-	public void realiceLaBusquedaConLosDatosSolicitados(List<String> datos) throws InterruptedException, ParseException  {
-		agenciaDeViajes.abrirUbicaciones(datos.get(0));
-	    agenciaDeViajes.abrirCalendario();
-	    agenciaDeViajes.seleccionarFecha(datos.get(1), datos.get(2),datos.get(3));
-	    agenciaDeViajes.abrirSegundoCalendario();
-	    agenciaDeViajes.seleccionarFechaDos(datos.get(4),datos.get(5),datos.get(6));
+	public void realiceLaBusquedaConLosDatosSolicitados(List<String> datos) throws Throwable  {
+		//agenciaDeViajes.abrirUbicaciones(datos.get(0));
+		// agenciaDeViajes.abrirCalendario();
+		// agenciaDeViajes.seleccionarFecha(datos.get(1), datos.get(2),datos.get(3));
+		// agenciaDeViajes.abrirSegundoCalendario();
+		// agenciaDeViajes.seleccionarFechaDos(datos.get(4),datos.get(5),datos.get(6));
 	    agenciaDeViajes.seleccionarRooms(datos.get(7));
-		System.out.println(datos.get(8));
-		//String greeting = System.getenv("dato");
 	    agenciaDeViajes.seleccionarAdultos(datos.get(8));
 	    agenciaDeViajes.seleccionarChildren(datos.get(9));
 	    agenciaDeViajes.buscarHotel();

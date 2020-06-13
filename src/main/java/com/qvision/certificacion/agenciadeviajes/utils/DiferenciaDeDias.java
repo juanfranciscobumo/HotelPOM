@@ -1,4 +1,4 @@
-package com.qvision.certificacion.agenciaDeViajes.utils;
+package com.qvision.certificacion.agenciadeviajes.utils;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;

@@ -17,4 +17,4 @@ Feature: Agencia de viajes
 Examples:
     | ID | LOCATION | MES INICIO | ANO INICIO | DIA INICIO | MES FIN |ANO FIN | DIA FIN | ROOMS |	ADULTS | CHILDREN |
       ##@externaldata@./src/test/resources/datadriven/AgenciaDeViajes.xlsx@Datos@1
-   |1   |San Francisco   |JANUARY   |2020   |25   |FEBRUARY   |2020   |8   |1   |1   |0|
+   |1   |San Francisco   |SEPTEMBER   |2020   |25   |OCTOBER   |2020   |8   |1   |1   |0|
