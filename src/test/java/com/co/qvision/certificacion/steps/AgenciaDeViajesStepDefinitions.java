@@ -30,11 +30,11 @@ public class AgenciaDeViajesStepDefinitions {
 
 	@When("^realice la busqueda con los datos solicitados$")
 	public void realiceLaBusquedaConLosDatosSolicitados(List<String> datos) throws Throwable  {
-		//agenciaDeViajes.abrirUbicaciones(datos.get(0));
-		// agenciaDeViajes.abrirCalendario();
-		// agenciaDeViajes.seleccionarFecha(datos.get(1), datos.get(2),datos.get(3));
-		// agenciaDeViajes.abrirSegundoCalendario();
-		// agenciaDeViajes.seleccionarFechaDos(datos.get(4),datos.get(5),datos.get(6));
+		agenciaDeViajes.abrirUbicaciones(datos.get(0));
+		 agenciaDeViajes.abrirCalendario();
+		 agenciaDeViajes.seleccionarFecha(datos.get(1), datos.get(2),datos.get(3));
+		 agenciaDeViajes.abrirSegundoCalendario();
+		 agenciaDeViajes.seleccionarFechaDos(datos.get(4),datos.get(5),datos.get(6));
 	    agenciaDeViajes.seleccionarRooms(datos.get(7));
 	    agenciaDeViajes.seleccionarAdultos(datos.get(8));
 	    agenciaDeViajes.seleccionarChildren(datos.get(9));

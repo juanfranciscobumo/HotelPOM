@@ -42,7 +42,8 @@ public class AgenciaDeViajesPages extends PageObject {
 	@FindBy(xpath = "/html/body/div/div[2]/div/div/div/div[2]/a[2]")
 	WebElement btnmesinicialdos;
 
-	@FindBy(xpath = "/html/body/div[2]/div/div/div[2]/div[1]/div/div/div[1]/div/div[1]/div[2]/div[1]/div/div/div/div/div/div/div/div/div/div/div/div[3]/div/div[1]/div/div/div/div/div[1]/div/input")
+	@FindBy(xpath = "/html/body/div/div/div/div[2]/div[1]/div/div/div[1]/div/div[1]/div[2]/div[1]/div/div/div/div/div/div/div/div/div/div/div/div[3]/div/div[1]/div/div/div/div/div/div/input")
+
 	WebElement ltRoom;
 
 	@FindBy(xpath = "/html/body/div/div/div/div[2]/div[1]/div/div/div[1]/div/div[1]/div[2]/div[1]/div/div/div/div/div/div/div/div/div/div/div/div[3]/div/div[2]/div/div/div/div/div/div/div/div/div/div/div[1]/div/div/div/div/div/div")
@@ -80,17 +81,9 @@ public class AgenciaDeViajesPages extends PageObject {
 
 	public void seleccionarRooms(String cantidadHabitaciones)  {
 		waitABit(2000);
-		System.out.println("hola1");
-		try {
-			ltRoom.click();
-		} catch (Exception e) {
-			System.out.println("NO ENCONTRO");
-		}
-
-		System.out.println("hola");
+		ltRoom.click();
 		find(By.xpath("//div[@class=\"dx-item-content dx-list-item-content\"][contains(text(),'" + cantidadHabitaciones
 				+ "')]")).click();
-		System.out.println("hola1");
 	}
 
 	public void seleccionarAdultos(String cantidadAdultos)  {
