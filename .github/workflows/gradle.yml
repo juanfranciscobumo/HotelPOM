@@ -9,9 +9,7 @@ jobs:
   build:
     runs-on: windows-latest
     steps:
-    - name: Start selenoid
-      uses: Xotabu4/selenoid-github-action@v2
-    - uses: actions/checkout@v1
+
     - run: ./gradlew clean test aggregate 
     
     - name: Init new repo in dist folder and commit generated files
