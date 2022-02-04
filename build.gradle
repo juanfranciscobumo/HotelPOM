@@ -1,9 +1,12 @@
+defaultTasks 'clean', 'test', 'aggregate'
+
 version '1.0-SNAPSHOT'
 
 apply plugin: 'java-library'
+apply plugin: 'org.sonarqube'
 
 repositories {
-    mavenLocal()
+    mavenCentral()
     jcenter()
 }
 
@@ -13,29 +16,52 @@ buildscript {
         jcenter()
     }
     dependencies {
-         classpath("net.serenity-bdd:serenity-gradle-plugin:2.1.6")  
+        classpath("net.serenity-bdd:serenity-gradle-plugin:2.3.6")
+        classpath("org.sonarsource.scanner.gradle:sonarqube-gradle-plugin:3.0")
+        classpath("net.serenity-bdd:serenity-single-page-report:2.4.48")
     }
 }
 
 apply plugin: 'java'
 apply plugin: 'eclipse'
 apply plugin: 'idea'
-apply plugin: 'net.serenity-bdd.aggregator'  
+apply plugin: 'net.serenity-bdd.aggregator'
+apply from: "$rootDir/gradle/libraries.gradle"
 
-dependencies {   
 
-    testCompile group: 'junit', name: 'junit', version: '4.13'
-    compile 'net.serenity-bdd:serenity-cucumber:1.9.51'
-   testCompile group: 'org.slf4j', name: 'slf4j-simple', version: '1.7.30'
-   compile group: 'com.codoid.products', name: 'fillo', version: '1.21'
-   compile group: 'org.apache.poi', name: 'poi', version: '4.1.2'
-   compile group: 'org.apache.logging.log4j', name: 'log4j-core', version: '2.13.1'
-    
-    } 
-tasks.withType(Test){
-    systemProperties = System.properties
-    maxParallelForks = Runtime.runtime.availableProcessors()
+sonarqube {
+    properties {
+        property "sonar.sourceEncoding", "UTF-8"
+    }
+}
+serenity {
+    reports = ["single-page-html"]
+}
+subprojects {
+    sonarqube {
+        properties {
+            property "sonar.sources", "src"
+        }
+    }
+}
+dependencies {
+
+    implementation libs.test.serenity.cucumber,
+            libs.test.junit,
+            libs.slf4jApi,
+            libs.test.fillo,
+            libs.test.log4j,
+            libs.test.poi,
+            libs.test.jacksonDatatype
+
+    implementation group: 'org.apache.poi', name: 'poi', version: '5.2.0'
 }
 
+test {
+    testLogging.showStandardStreams = true
+    systemProperties System.getProperties()
+}
 
 gradle.startParameter.continueOnFailure = true
+
+test.finalizedBy(aggregate)

@@ -1,0 +1,24 @@
+ext {
+    slf4jVersion = '1.7.32'
+    serenityCucumberVersion = '2.5.8'
+    junitVersion = '5.8.2'
+    filloVersion = '1.21'
+    poiVersion = '5.2.0'
+    log4jVersion = '2.17.1'
+    jacksonVersion = '2.12.3'
+    libs = [
+            slf4jApi: "org.slf4j:slf4j-simple:${slf4jVersion}",
+
+            test    : [
+                    serenity: [
+                            cucumber: "net.serenity-bdd:serenity-cucumber6:${serenityCucumberVersion}",
+                    ],
+                    junit   : "org.junit.jupiter:junit-jupiter-engine:${junitVersion}",
+                    fillo   : "com.codoid.products:fillo:${filloVersion}",
+                    poi     : "org.apache.poi:poi:${poiVersion}",
+                    log4j   : "org.apache.logging.log4j:log4j-core:${log4jVersion}",
+                    jacksonDatatype  : "com.fasterxml.jackson.datatype:jackson-datatype-jsr310:${jacksonVersion}",
+
+            ]
+    ]
+}
