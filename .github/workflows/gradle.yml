@@ -10,7 +10,12 @@ jobs:
     runs-on: windows-latest
     steps:
 
-    - run: ./gradlew clean test aggregate 
+    - uses: actions/setup-java@v2
+      with:
+       fetch-depth: 0
+       distribution: 'temurin'
+       java-version: '11'
+    - run: ./gradlew clean test aggregate
     
     - name: Init new repo in dist folder and commit generated files
       run: |
