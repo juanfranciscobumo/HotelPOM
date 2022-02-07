@@ -1,20 +1,14 @@
 package com.qvision.certificacion.actions;
 
 import com.qvision.certificacion.models.IngresaLosDatosModel;
-import com.qvision.certificacion.userinterfaces.AgenciaDeViajesPages;
 import com.qvision.certificacion.userinterfaces.PreciosHotelPages;
 import net.thucydides.core.pages.PageObject;
-import org.openqa.selenium.By;
 
 import java.util.List;
 
-import static com.qvision.certificacion.userinterfaces.PreciosHotelPages.precio;
-import static com.qvision.certificacion.utils.CalcularTarifa.laTarifa;
 import static com.qvision.certificacion.utils.Constantes.NUMERO_DIAS;
-import static com.qvision.certificacion.utils.Constantes.TARIFA_MAS_ECONOMICA;
 import static com.qvision.certificacion.utils.DiferenciaDeDias.diferenciaDeDias;
-import static com.qvision.certificacion.utils.ManipularExcel.grabarDatos;
-import static com.qvision.certificacion.utils.PrecioMasBajo.obtenerPrecioMasBajo;
+import static net.serenitybdd.core.Serenity.setSessionVariable;
 
 public class BuscaElPrecio extends PageObject {
     private String mesInicio;
@@ -38,11 +32,10 @@ public class BuscaElPrecio extends PageObject {
     public void action() {
         waitABit(2000);
         precios.buscarPrecioMasBajo();
-        grabarDatos(NUMERO_DIAS, diferenciaDeDias(diaInicio, mesInicio, annoInicio, diaFin, mesFin, annoFin));
-        laTarifa();
+        setSessionVariable(NUMERO_DIAS).to(diferenciaDeDias(diaInicio, mesInicio, annoInicio, diaFin, mesFin, annoFin));
     }
 
-    public static void conLosDatos(List<IngresaLosDatosModel> datos,PreciosHotelPages precios) {
-        new BuscaElPrecio(datos,precios).action();
+    public static void conLosDatos(List<IngresaLosDatosModel> datos, PreciosHotelPages precios) {
+        new BuscaElPrecio(datos, precios).action();
     }
 }
