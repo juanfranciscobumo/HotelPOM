@@ -10,51 +10,56 @@ import org.slf4j.LoggerFactory;
 import static com.qvision.certificacion.utils.Constantes.*;
 
 public class ManipularExcel {
-    private static Logger logger = LoggerFactory.getLogger(ManipularExcel.class);
-    private static Fillo fillo = new Fillo();
+    private static final Logger logger = LoggerFactory.getLogger(ManipularExcel.class);
+    private static final Fillo fillo = new Fillo();
     private static Connection connection = null;
-    private static String dias = null;
+    private static String respuesta = null;
     private static Recordset recordset;
-    private static String tarifa = null;
 
     public static void grabarDatos(String nombre, int dato) {
         try {
-            connection = fillo.getConnection(RUTA_EXCEL);
-            connection.executeUpdate(String.format(QUERY_GUARDAR, TARIFA, nombre, dato));
+            crearConexion().executeUpdate(String.format(QUERY_GUARDAR, TARIFA, nombre, dato));
         } catch (FilloException e) {
             logger.error(e.getMessage());
         }
-        connection.close();
+        crearConexion().close();
     }
 
     public static String getNumeroDias() {
 
         try {
-            connection = fillo.getConnection(RUTA_EXCEL);
-            recordset = connection.executeQuery(QUERY_CONSULTA);
+            recordset = crearConexion().executeQuery(QUERY_CONSULTA);
             while (recordset.next()) {
-                dias = recordset.getField(NUMERO_DIAS);
+                respuesta = recordset.getField(NUMERO_DIAS);
             }
         } catch (FilloException e) {
             logger.error(e.getMessage());
         }
         recordset.close();
-        connection.close();
-        return dias;
+        crearConexion().close();
+        return respuesta;
     }
 
     public static String getTarifa() {
         try {
-            connection = fillo.getConnection(RUTA_EXCEL);
-            recordset = connection.executeQuery(QUERY_CONSULTA);
+            recordset = crearConexion().executeQuery(QUERY_CONSULTA);
             while (recordset.next()) {
-                tarifa = recordset.getField(TARIFA_MAS_ECONOMICA);
+                respuesta = recordset.getField(TARIFA_MAS_ECONOMICA);
             }
         } catch (FilloException e) {
-            e.printStackTrace();
+            logger.error(e.getMessage());
         }
         recordset.close();
-        connection.close();
-        return tarifa;
+        crearConexion().close();
+        return respuesta;
+    }
+
+    public static Connection crearConexion() {
+        try {
+            connection = fillo.getConnection(RUTA_EXCEL);
+        } catch (FilloException e) {
+            logger.error(e.getMessage());
+        }
+        return connection;
     }
 }

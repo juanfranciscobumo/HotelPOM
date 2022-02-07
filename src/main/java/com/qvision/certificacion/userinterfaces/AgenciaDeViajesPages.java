@@ -1,21 +1,22 @@
 package com.qvision.certificacion.userinterfaces;
 
-import java.util.List;
-
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
-
 import net.serenitybdd.core.annotations.findby.FindBy;
 import net.serenitybdd.core.pages.PageObject;
 import net.thucydides.core.annotations.DefaultUrl;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 
-@DefaultUrl("https://js.devexpress.com/Demos/DXHotels/#home")
+import java.util.List;
+
+import static com.qvision.certificacion.utils.Constantes.URL;
+
+@DefaultUrl(URL)
 public class AgenciaDeViajesPages extends PageObject {
 
     @FindBy(xpath = "//input[@name='location']/following-sibling::div")
     public static WebElement selUbicacion;
 
-    @FindBy(xpath = "//div[@class='dx-first-col dx-field-item dx-col-0 dx-field-item-required dx-flex-layout dx-label-v-align']//div[contains(@class, 'datebox ')]/div/div/div[2]")
+    @FindBy(xpath = "//input[@name='checkIn']//following-sibling::div/div[2]")
     public static WebElement calendario;
 
     @FindBy(xpath = "//div[@class='dx-calendar-views-wrapper']/div[1]/table//td/span")
@@ -30,7 +31,7 @@ public class AgenciaDeViajesPages extends PageObject {
     @FindBy(xpath = "//*[@class='dx-popup-content']/div/div[2]/a[2]")
     public static WebElement btnmesinicial;
 
-    @FindBy(xpath = "/html/body/div/div[1]/div/div[2]/div[1]/div/div/div[1]/div/div[1]/div[2]/div[1]/div/div/div/div/div/div/div/div/div/div/div/div[2]/div/div[2]/div/div/div/div/div[1]/div/div[2]/div/div/div")
+    @FindBy(xpath = "//input[@name='checkOut']//following-sibling::div/div[2]")
     public static WebElement calendarioDos;
 
     @FindBy(xpath = "/html/body/div/div[2]/div/div/div/div/div/div[1]//td")
@@ -39,13 +40,13 @@ public class AgenciaDeViajesPages extends PageObject {
     @FindBy(xpath = "/html/body/div/div[2]/div/div/div/div[2]/a[2]")
     public static WebElement btnmesinicialdos;
 
-    @FindBy(xpath = "/html/body/div/div/div/div[2]/div[1]/div/div/div[1]/div/div[1]/div[2]/div[1]/div/div/div/div/div/div/div/div/div/div/div/div[3]/div/div[1]/div/div/div/div/div/div/input")
+    @FindBy(xpath = "//input[@name='rooms']/following-sibling::div")
     public static WebElement ltRoom;
 
-    @FindBy(xpath = "/html/body/div/div/div/div[2]/div[1]/div/div/div[1]/div/div[1]/div[2]/div[1]/div/div/div/div/div/div/div/div/div/div/div/div[3]/div/div[2]/div/div/div/div/div/div/div/div/div/div/div[1]/div/div/div/div/div/div")
+    @FindBy(xpath = "//input[@name='adults']/following-sibling::div")
     public static WebElement ltAdults;
 
-    @FindBy(xpath = "/html/body/div/div/div/div[2]/div[1]/div/div/div[1]/div/div[1]/div[2]/div[1]/div/div/div/div/div/div/div/div/div/div/div/div[3]/div/div[2]/div/div/div/div/div/div/div/div/div/div/div[2]/div/div/div")
+    @FindBy(xpath = "//input[@name='children']/following-sibling::div")
     public static WebElement ltChildren;
 
     @FindBy(xpath = "//span[.='SEARCH']")
@@ -54,7 +55,7 @@ public class AgenciaDeViajesPages extends PageObject {
     public static String listaUbicacion = "//*[@class='dx-scrollview-content']/div/div[contains(text(),'%s')]";
     public static String room = "//div[@class='dx-item-content dx-list-item-content'][contains(text(),'%s')]";
     public static String adultos = "/html/body/div/div[2]/div/div/div/div[1]/div/div[1]/div[2]/div/div[contains(text(),'%s')]";
-    public static String children = "/html/body/div/div[2]/div/div/div/div[1]/div/div[1]/div[2]/div/div[contains(text(),'%s')]";
+    public static String children = "//div[.='%s']";
 
     public void abrirUbicaciones(String ubicacion) {
         find(By.xpath(String.format(listaUbicacion, ubicacion))).click();

@@ -1,5 +1,7 @@
 package com.qvision.certificacion.models;
 
+import com.qvision.certificacion.userinterfaces.AgenciaDeViajesPages;
+
 public class IngresaLosDatosModel {
     private String location;
     private String mesInicio;
@@ -11,6 +13,7 @@ public class IngresaLosDatosModel {
     private String rooms;
     private String adults;
     private String children;
+
 
     public String getLocation() {
         return location;

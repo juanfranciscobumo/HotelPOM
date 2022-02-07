@@ -11,7 +11,7 @@ import static com.qvision.certificacion.utils.Constantes.ANNO_MM_DD;
 import static com.qvision.certificacion.utils.Constantes.FECHA;
 
 public class DiferenciaDeDias {
-    private static Logger logger = LoggerFactory.getLogger(ManipularExcel.class);
+    private static Logger logger = LoggerFactory.getLogger(DiferenciaDeDias.class);
     private static SimpleDateFormat dateFormat = new SimpleDateFormat(ANNO_MM_DD);
     private static int dias = 0;
 
