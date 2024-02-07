@@ -43,9 +43,7 @@ public class BuscaLaFecha extends PageObject {
     public static void darClickOnLista(List<WebElement> ltDias, String dia) {
         ltDias.stream()
                 .filter(p -> p.getText().equals(dia))
-                .forEach((b) -> {
-                    b.click();
-                });
+                .forEach(WebElement::click);
     }
 
     public static boolean getMes(String mesInicial, String mes, String ano) {

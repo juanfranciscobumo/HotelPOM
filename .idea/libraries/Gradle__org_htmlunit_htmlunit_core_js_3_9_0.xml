@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="Gradle: org.htmlunit:htmlunit-core-js:3.9.0" type="java-imported" external-system-id="GRADLE">
+    <properties groupId="org.htmlunit" artifactId="htmlunit-core-js" version="3.9.0" />
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.htmlunit/htmlunit-core-js/3.9.0/a4adc7a80625607556071887c0e2dddfb601d5dc/htmlunit-core-js-3.9.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.htmlunit/htmlunit-core-js/3.9.0/dcc3e1def218e4bb71f3356e915bfd2b80b49015/htmlunit-core-js-3.9.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

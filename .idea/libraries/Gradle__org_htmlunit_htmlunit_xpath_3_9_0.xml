@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="Gradle: org.htmlunit:htmlunit-xpath:3.9.0" type="java-imported" external-system-id="GRADLE">
+    <properties groupId="org.htmlunit" artifactId="htmlunit-xpath" version="3.9.0" />
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.htmlunit/htmlunit-xpath/3.9.0/17f9b257e8e9b95c713b699a851aa3e5fed49bb4/htmlunit-xpath-3.9.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.htmlunit/htmlunit-xpath/3.9.0/f33b877761a75ff82ce7e0feb6a84b94a89d1a57/htmlunit-xpath-3.9.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

@@ -2,9 +2,9 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <bytecodeTargetLevel>
-      <module name="Qvision" target="1.8" />
-      <module name="Qvision.main" target="1.8" />
-      <module name="Qvision.test" target="1.8" />
+      <module name="Qvision" target="11" />
+      <module name="Qvision.main" target="11" />
+      <module name="Qvision.test" target="11" />
       <module name="Reto_AgenciaDeViajes.main" target="11" />
       <module name="Reto_AgenciaDeViajes.test" target="11" />
     </bytecodeTargetLevel>

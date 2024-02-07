@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="Gradle: org.htmlunit:htmlunit:3.9.0" type="java-imported" external-system-id="GRADLE">
+    <properties groupId="org.htmlunit" artifactId="htmlunit" version="3.9.0" />
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.htmlunit/htmlunit/3.9.0/860e34e914fe0f484f774a092c389d756255ed1b/htmlunit-3.9.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.htmlunit/htmlunit/3.9.0/f3ff8f01d6de67d298390b0d5558a56534d486d0/htmlunit-3.9.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

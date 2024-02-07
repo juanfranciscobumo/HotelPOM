@@ -1,16 +1,18 @@
 package com.co.qvision.certificacion.runners;
 
-import static io.cucumber.junit.CucumberOptions.SnippetType.CAMELCASE;
+import org.junit.platform.suite.api.ConfigurationParameter;
+import org.junit.platform.suite.api.IncludeEngines;
+import org.junit.platform.suite.api.SelectClasspathResource;
+import org.junit.platform.suite.api.Suite;
 
-import io.cucumber.junit.CucumberOptions;
-import net.serenitybdd.cucumber.CucumberWithSerenity;
-import org.junit.runner.RunWith;
+import static io.cucumber.core.options.Constants.PLUGIN_PROPERTY_NAME;
 
+@Suite
+@IncludeEngines("cucumber")
+@SelectClasspathResource("/features")
+@ConfigurationParameter(key= "cucumber.features", value="src/test/resources/features/AgenciaDeViajes.feature")
+@ConfigurationParameter(key = PLUGIN_PROPERTY_NAME, value = "io.cucumber.core.plugin.SerenityReporterParallel,pretty,timeline:build/test-results/timeline")
 
-@RunWith(CucumberWithSerenity.class)
-@CucumberOptions(features = "src/test/resources/features/AgenciaDeViajes.feature",
-        glue = "com/co/qvision/certificacion/steps",
-        snippets = CAMELCASE)
 public class AgenciaDeViajesRunner {
 
 }

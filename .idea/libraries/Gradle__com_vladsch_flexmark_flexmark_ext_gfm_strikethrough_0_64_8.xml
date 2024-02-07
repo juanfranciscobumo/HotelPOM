@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="Gradle: com.vladsch.flexmark:flexmark-ext-gfm-strikethrough:0.64.8" type="java-imported" external-system-id="GRADLE">
+    <properties groupId="com.vladsch.flexmark" artifactId="flexmark-ext-gfm-strikethrough" version="0.64.8" />
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.vladsch.flexmark/flexmark-ext-gfm-strikethrough/0.64.8/1851e124c6d85c5c7f3fdbbe066d30a76ad6be44/flexmark-ext-gfm-strikethrough-0.64.8.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.vladsch.flexmark/flexmark-ext-gfm-strikethrough/0.64.8/5c0e2d912b90ec664c42016790bb6b5b5c772667/flexmark-ext-gfm-strikethrough-0.64.8-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

@@ -1,5 +1,5 @@
 <component name="libraryTable">
-  <library name="Gradle: org.apache.commons:commons-csv:1.5">
+  <library name="Gradle: org.apache.commons:commons-csv:1.5" external-system-id="GRADLE">
     <CLASSES>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.commons/commons-csv/1.5/e10f140af5b82167640f254fa9d88e35ad74329c/commons-csv-1.5.jar!/" />
     </CLASSES>

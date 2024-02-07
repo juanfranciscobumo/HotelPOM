@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="Gradle: io.github.classgraph:classgraph:4.8.157" type="java-imported" external-system-id="GRADLE">
+    <properties groupId="io.github.classgraph" artifactId="classgraph" version="4.8.157" />
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.github.classgraph/classgraph/4.8.157/6618a0fab91cba321618db59d6b77f79590a80ac/classgraph-4.8.157.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.github.classgraph/classgraph/4.8.157/c1f4b1704639fcfc13eb08d04d920fb071265a0e/classgraph-4.8.157-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

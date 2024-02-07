@@ -1,5 +1,5 @@
 <component name="libraryTable">
-  <library name="Gradle: org.fluentlenium:fluentlenium-core:0.10.2">
+  <library name="Gradle: org.fluentlenium:fluentlenium-core:0.10.2" external-system-id="GRADLE">
     <CLASSES>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.fluentlenium/fluentlenium-core/0.10.2/8795bd4ce7050f0c45b772e8d3b36c39646e2f0b/fluentlenium-core-0.10.2.jar!/" />
     </CLASSES>

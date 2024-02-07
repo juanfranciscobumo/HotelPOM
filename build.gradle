@@ -3,65 +3,60 @@ defaultTasks 'clean', 'test', 'aggregate'
 version '1.0-SNAPSHOT'
 
 apply plugin: 'java-library'
-apply plugin: 'org.sonarqube'
 
 repositories {
     mavenCentral()
-    jcenter()
 }
 
 buildscript {
     repositories {
         mavenCentral()
-        jcenter()
+        maven {
+            url "https://plugins.gradle.org/m2/"
+        }
     }
     dependencies {
-        classpath("net.serenity-bdd:serenity-gradle-plugin:2.3.6")
-        classpath("org.sonarsource.scanner.gradle:sonarqube-gradle-plugin:3.0")
-        classpath("net.serenity-bdd:serenity-single-page-report:2.4.48")
+        classpath("net.serenity-bdd:serenity-gradle-plugin:4.0.46")
     }
 }
-
 apply plugin: 'java'
 apply plugin: 'eclipse'
 apply plugin: 'idea'
-apply plugin: 'net.serenity-bdd.aggregator'
+apply plugin: "net.serenity-bdd.serenity-gradle-plugin"
 apply from: "$rootDir/gradle/libraries.gradle"
-
-
-sonarqube {
-    properties {
-        property "sonar.sourceEncoding", "UTF-8"
-    }
-}
-serenity {
-    reports = ["single-page-html"]
-}
-subprojects {
-    sonarqube {
-        properties {
-            property "sonar.sources", "src"
-        }
-    }
-}
+sourceCompatibility = 11
+targetCompatibility = 11
 dependencies {
 
     implementation libs.test.serenity.cucumber,
-            libs.test.junit,
-            libs.slf4jApi,
-            libs.test.fillo,
-            libs.test.log4j,
-            libs.test.poi,
-            libs.test.jacksonDatatype
+            libs.test.serenity.junit,
+            libs.test.cucumber.junit,
+            libs.test.cucumber.java,
+            libs.test.cucumber.core,
+            libs.test.serenity.core,
+            libs.test.serenity.screenplay,
+            libs.test.serenity.rest,
+            libs.test.serenity.screenplayWebdriver,
+            libs.test.junitPlatform,
+            libs.test.junitLauncher,
+            libs.test.junitVintage,
+            libs.test.junitJupiter,
+            libs.test.assertj,
+            libs.test.jacksonDataType,
+            libs.logback,
+            libs.fillo
 
-    implementation group: 'org.apache.poi', name: 'poi', version: '5.2.0'
 }
-
 test {
     testLogging.showStandardStreams = true
     systemProperties System.getProperties()
+    maxParallelForks = 1
 }
 
 gradle.startParameter.continueOnFailure = true
+
+test {
+    useJUnitPlatform()
+}
 
 test.finalizedBy(aggregate)

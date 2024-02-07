@@ -10,8 +10,6 @@ public class TarifaNetaPages extends PageObject{
 	@FindBy(xpath="//div[@class='sum']/h4")
     WebElement tarifa;
 	public String  tarifaNeta(){
-		String tarifaNeta=tarifa.getText().replace("$", "").replace(".00", "");
-		waitABit(2000);
-		return tarifaNeta;
+		return tarifa.getText().replaceAll("\\$|\\.00", "");
 	}
 }

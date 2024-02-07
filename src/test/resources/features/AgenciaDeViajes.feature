@@ -18,4 +18,4 @@ Feature: Agencia de viajes
 
     Examples:
       | location      | mesInicio | anoInicio | diaInicio | mesFin  | anoFin | diaFin | rooms | adults | children |
-      | San Francisco | SEPTEMBER | 2022      | 25        | OCTOBER | 2022   | 9      | 1     | 1      | 0        |
+      | San Francisco | SEPTEMBER | 2025      | 25        | OCTOBER | 2025   | 9      | 1     | 1      | 0        |
